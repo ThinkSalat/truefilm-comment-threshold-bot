@@ -46,8 +46,8 @@ jobs:
       with:
         push: true
         tags: |
-          ghcr.io/thinksalat/reddit-post-notifier:${{ steps.vars.outputs.tag }}
-          ghcr.io/thinksalat/reddit-post-notifier:latest
+          ghcr.io/thinksalat/truefilm-comment-threshold-bot:${{ steps.vars.outputs.tag }}
+          ghcr.io/thinksalat/truefilm-comment-threshold-bot:latest
 
     - name: Print image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
