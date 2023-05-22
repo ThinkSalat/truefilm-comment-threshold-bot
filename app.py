@@ -12,6 +12,8 @@ LOGGING = os.getenv("RPN_LOGGING", "FALSE")
 YAML_KEY_CLIENT = "client"
 YAML_KEY_SECRET = "secret"
 YAML_KEY_AGENT = "agent"
+YAML_KEY_PASSWORD = "password"
+YAML_KEY_USERNAME = "username"
 
 def main():
     print("Beginning bot")
@@ -20,12 +22,15 @@ def main():
         client_id=config[YAML_KEY_CLIENT],
         client_secret=config[YAML_KEY_SECRET],
         user_agent=config[YAML_KEY_AGENT],
+        password=config[YAML_KEY_PASSWORD]
+        username=config[YAML_KEY_USERNAME]
     )
 
     subreddit = reddit.subreddit("TrueFilm")
     while True:
         try:
             for submission in subreddit.stream.submissions(pause_after=None, skip_existing=True):
+                print("subimtted", submission)
                 submission.reply(COMMENT_CONTENT)
         except KeyboardInterrupt:
             sys.exit("\tStopping application, bye bye")
