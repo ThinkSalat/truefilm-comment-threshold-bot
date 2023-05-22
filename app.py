@@ -7,7 +7,7 @@ import sys
 import time
 
 COMMENT_CONTENT = "There is a 180 character minimum for top level comments. This is to keep discussion in depth and prevent threads full of non in depth comments. If your comment doesn't meet the threshold, please post it as a reply to this comment."
-CONFIG_PATH = os.getenv("RPN_CONFIG", "config.yaml")
+CONFIG_PATH = os.getenv("RPN_CONFIG", "config.yml")
 LOGGING = os.getenv("RPN_LOGGING", "FALSE")
 YAML_KEY_CLIENT = "client"
 YAML_KEY_SECRET = "secret"
