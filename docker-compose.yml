@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+    truefilm-comment-threshold-bot:
+        container_name: truefilm-comment-threshold-bot
+        image: ghcr.io/thinksalat/truefilm-comment-threshold-bot:latest
+        restart: unless-stopped
+        volumes:
+            - ./config.yaml:/app/config.yaml
