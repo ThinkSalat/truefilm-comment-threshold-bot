@@ -22,7 +22,7 @@ def main():
         client_id=config[YAML_KEY_CLIENT],
         client_secret=config[YAML_KEY_SECRET],
         user_agent=config[YAML_KEY_AGENT],
-        password=config[YAML_KEY_PASSWORD]
+        password=config[YAML_KEY_PASSWORD],
         username=config[YAML_KEY_USERNAME]
     )
 
